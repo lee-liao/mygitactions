@@ -6,6 +6,10 @@ permissions:
   contents: read
   statuses: write
 
+concurrency:
+  group: super-lint-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   super-lint:
     name: Lint code base
