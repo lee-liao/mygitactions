@@ -1,2 +1,3 @@
-# mygitactions
-try ci cd
+# Readme
+
+Try CI/CD
