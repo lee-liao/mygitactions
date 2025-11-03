@@ -1,0 +1,2 @@
+# mygitactions
+try ci cd
