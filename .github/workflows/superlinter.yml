@@ -2,6 +2,10 @@ name: Supper-Linter
 
 on: push
 
+permissions:
+  contents: read
+  statuses: write
+
 jobs:
   super-lint:
     name: Lint code base
@@ -9,10 +13,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-       
+
       - name: Run Super-Linter
         uses: super-linter/super-linter@v7.1.0
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
